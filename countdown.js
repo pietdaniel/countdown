@@ -107,8 +107,10 @@
                                 // update on switch
                                 
                                 $("#"+key+(i+1)).html(dstring[i]);
-                                if ( Object.keys(options.animations).length > 0) {
-                                    $("#"+key+(i+1)).animate(options.animations, 200 );
+                                if (typeof options.animations !== 'undefined') {
+                                    if ( Object.keys(options.animations).length > 0) {
+                                        $("#"+key+(i+1)).animate(options.animations, 200 );
+                                    }
                                 }
                             }
                         }
